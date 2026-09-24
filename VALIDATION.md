@@ -1,4 +1,12 @@
-# V1 validation
+# V2 validation
+
+- `assembleDebug assembleDebugAndroidTest lintDebug` passed for version 2.0.
+- Eight Android instrumentation test groups passed on Android 12: merge/split, extraction/order, rotation/crop/stamps, password round-trip, JPEG/compression/repair, Office exports, permanent raster blackout, and form fill/flatten.
+- Generated DOCX, XLSX and PPTX exports reopened with independent python-docx, openpyxl and python-pptx readers. Expected text and three slide images were present. This checks package readability, not full desktop-Office compatibility or source-layout fidelity.
+- Main screen visually inspected at 720 × 1280. Maa's continuous 2D animation is active; tapping her pauses it for accessibility inspection.
+- See FEATURES.md for the explicit advanced-feature gaps. No iLovePDF API, paid AI service or cloud document upload was used.
+
+## Earlier V1 validation retained
 
 - Android Gradle 8.7.0 / Gradle 8.9 / JDK 17: `assembleDebug lintDebug` passed.
 - Lint has no errors. Remaining warnings concern target SDK age and inline bilingual strings.

@@ -1,27 +1,20 @@
-# maapdf — Android document assistant V1
+# maapdf — Android document assistant V2
 
 A small native Android app with large bilingual buttons. Android 8.0 or newer. No account, API key, advertising, analytics or paid AI dependency.
 
-## V1 scope
+## V2 scope
 
-| Format / feature | Supported |
-|---|---|
-| PDF | Native page viewing, previous/next/page command, save copy |
-| TXT / CSV | UTF-8 text editing, confirm text replacement, save new copy |
-| DOCX | Main-body text preview, explicit conversion to editable TXT copy |
-| XLSX | Worksheet cell addresses and cached values; text preview, TXT copy |
-| Import / camera | Image import to PDF; basic camera thumbnail capture to PDF |
-| Voice | Android speech-recognition UI, Hindi locale, typed fallback |
-| Read aloud | Text and Office previews through Android TTS |
-| Commands | English/Hindi/Hinglish rules, optional HTTPS CPU backend |
+27 on-phone PDF tools, text-to-PDF export, large bilingual controls, and an original gently animated Maa caricature. Tools are grouped into Arrange, Convert, Write, Passwords & Forms, and Check & Reduce.
 
-No PDF text editing, OCR, document-layout reconstruction, formula calculation, Office round-trip editing, multi-page scanner, or guaranteed offline speech recognition. Camera quick capture uses the camera's thumbnail; import a full-resolution image for readable scans. Password-protected PDFs are unsupported. Maximum input file 20 MB; extracted Office XML 4 MB. Large documents may be slow. Office preview ignores images, headers, and complex formatting. CSV is edited as text, not a spreadsheet grid. Avoid reopening another file before saving your edits.
+See [FEATURES.md](FEATURES.md) for each implemented feature and its limitations. This is not full iLovePDF feature parity. OCR, translation, AI summary, validated PDF/A, faithful Office conversions and new form creation remain unimplemented. No paid service was started.
+
+The main editor supports UTF-8 TXT/CSV, DOCX/XLSX text previews, basic camera/photo import, and PDF viewing/read-aloud for selectable text. Inputs to PDF tools are limited to 30 MB each, 20 files and 200 pages per job. Some PDFs/fonts/images are unsupported.
 
 ## Build
 
 Install JDK 17 and Android SDK 35 with build-tools 35.0.0. Set `JAVA_HOME` and `ANDROID_HOME` (or create `local.properties` containing `sdk.dir=...`). Run `gradlew.bat assembleDebug` on Windows or `./gradlew assembleDebug` on Linux. APK: `app/build/outputs/apk/debug/app-debug.apk`.
 
-This V1 download is a debug-signed test APK, not a Play Store production release. Future distribution should use an owner-controlled release signing key. Never commit keys. Android may ask you to permit installation from your browser. Only install from the owner's published page. SHA-256 is published beside the download.
+This V2 download is a debug-signed test APK, not a Play Store production release. Future distribution should use an owner-controlled release signing key. Never commit keys. Android may ask you to permit installation from your browser. Only install from the owner's published page. SHA-256 is published beside the download.
 
 ## Lightning free CPU backend
 
