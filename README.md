@@ -1,20 +1,20 @@
-# maapdf — Android document assistant V2
+# maapdf — Android document assistant V3
 
-A small native Android app with large bilingual buttons. Android 8.0 or newer. No account, API key, advertising, analytics or paid AI dependency.
+A small native Android app with large bilingual buttons. Android 8.0 or newer. No account, paid API key, advertising or paid AI dependency. Google ML Kit sends performance/utilization metrics as described below.
 
-## V2 scope
+## V3 scope
 
-27 on-phone PDF tools, text-to-PDF export, large bilingual controls, and an original gently animated Maa caricature. Tools are grouped into Arrange, Convert, Write, Passwords & Forms, and Check & Reduce.
+34 on-phone document tools, text-to-PDF export, large bilingual controls, and an original gently animated Maa caricature. Tools are grouped into Arrange, Convert, Write, Passwords & Forms, and Check & Reduce, and Read & Understand.
 
-See [FEATURES.md](FEATURES.md) for each implemented feature and its limitations. This is not full iLovePDF feature parity. OCR, translation, AI summary, validated PDF/A, faithful Office conversions and new form creation remain unimplemented. No paid service was started.
+See [FEATURES.md](FEATURES.md) for each implemented feature and its limitations. This is not full iLovePDF feature parity. V3 adds English/Hindi OCR, searchable PDFs, key-sentence summaries, text translation, a new text-field tool, saved workflows and local HTML printing. Validated PDF/A, faithful Office conversions and generative AI summaries remain unimplemented. No paid service was started.
 
 The main editor supports UTF-8 TXT/CSV, DOCX/XLSX text previews, basic camera/photo import, and PDF viewing/read-aloud for selectable text. Inputs to PDF tools are limited to 30 MB each, 20 files and 200 pages per job. Some PDFs/fonts/images are unsupported.
 
 ## Build
 
-Install JDK 17 and Android SDK 35 with build-tools 35.0.0. Set `JAVA_HOME` and `ANDROID_HOME` (or create `local.properties` containing `sdk.dir=...`). Run `gradlew.bat assembleDebug` on Windows or `./gradlew assembleDebug` on Linux. APK: `app/build/outputs/apk/debug/app-debug.apk`.
+Install JDK 17 and Android SDK 35 with build-tools 35.0.0. Set `JAVA_HOME` and `ANDROID_HOME` (or create `local.properties` containing `sdk.dir=...`). Run `gradlew.bat assembleDebug` on Windows or `./gradlew assembleDebug` on Linux. APKs are split by CPU: `app-arm64-v8a-debug.apk` (most modern phones), `app-armeabi-v7a-debug.apk` (older 32-bit phones), and `app-x86_64-debug.apk` (test emulator). They are in `app/build/outputs/apk/debug/`.
 
-This V2 download is a debug-signed test APK, not a Play Store production release. Future distribution should use an owner-controlled release signing key. Never commit keys. Android may ask you to permit installation from your browser. Only install from the owner's published page. SHA-256 is published beside the download.
+This V3 download is a debug-signed test APK, not a Play Store production release. Future distribution should use an owner-controlled release signing key. Never commit keys. Android may ask you to permit installation from your browser. Only install from the owner's published page. SHA-256 is published beside the download.
 
 ## Lightning free CPU backend
 
@@ -31,7 +31,7 @@ Lightning currently documents one free 4-CPU Studio; account eligibility, storag
 
 ## Privacy
 
-Documents remain in phone storage and private temporary app cache. Only selected files are read via Android's file picker. Original files are never overwritten by the app. Save always uses the system's new-document picker. Android speech recognition may send audio to the phone's configured provider. TTS depends on installed languages. Optional backend sends command text only after confirmation. No embedded secrets. Uninstall removes app cache. Do not put sensitive personal information into voice commands if your speech provider is not approved for it.
+Documents remain in phone storage and private temporary app cache. Only selected files are read via Android's file picker. Original files are never overwritten by the app. Save always uses the system's new-document picker. Android speech recognition may send audio to the phone's configured provider. TTS depends on installed languages. Optional backend sends command text only after confirmation. No embedded secrets. OCR and translation use Google ML Kit: content stays on-device, but models may be downloaded and performance/utilization metrics sent to Google. Translation is powered by Google Translate: https://cloud.google.com/translate. See https://developers.google.com/ml-kit/terms and licenses/MLKIT-NOTICE.md. Uninstall removes app cache. Do not put sensitive personal information into voice commands if your speech provider is not approved for it.
 
 ## Validation
 

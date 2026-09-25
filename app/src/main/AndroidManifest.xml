@@ -2,6 +2,6 @@
  <uses-permission android:name="android.permission.INTERNET" />
  <queries><intent><action android:name="android.speech.action.RECOGNIZE_SPEECH" /></intent><intent><action android:name="android.media.action.IMAGE_CAPTURE" /></intent><intent><action android:name="android.intent.action.TTS_SERVICE" /></intent></queries>
  <application android:icon="@drawable/ic_maapdf" android:dataExtractionRules="@xml/data_extraction_rules" android:label="maapdf" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:allowBackup="false" android:usesCleartextTraffic="false" android:supportsRtl="true">
- <activity android:name=".ToolsActivity" android:exported="false" android:configChanges="orientation|screenSize|keyboardHidden" /><activity android:name=".MainActivity" android:configChanges="orientation|screenSize|keyboardHidden" android:exported="true"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
+ <activity android:name=".HtmlActivity" android:exported="false" /><activity android:name=".ToolsActivity" android:exported="false" android:configChanges="orientation|screenSize|keyboardHidden" /><activity android:name=".MainActivity" android:configChanges="orientation|screenSize|keyboardHidden" android:exported="true"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
  </application>
 </manifest>

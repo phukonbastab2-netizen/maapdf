@@ -1,3 +1,14 @@
+# V3 validation
+
+- Version 3.0: Android build and lint passed. ARM64 and ARMv7 APK signatures verified.
+- 16 instrumentation tests passed on Android 12 (MuMu, x86_64). Coverage includes all eight V2 PDF test groups, English/Hindi OCR, a searchable PDF text layer, blank-scan rejection, key-sentence summaries, form-field creation and filling, and the saved three-step workflow.
+- English-to-Hindi translation was exercised with the real Google ML Kit model, including its initial download. Bengali and reverse-direction translations were not independently tested.
+- Local HTML preview loaded and enabled the print action; script, network, file and content-access restrictions were checked. Final Android print-to-PDF output remains unverified.
+- Rotated workflow text was verified after normalizing extraction whitespace. This is not a comprehensive visual-layout test.
+- The shipped ARM APKs are built from the same source; physical ARM phone installation, camera, speech and TTS remain unverified.
+- Maa retains the original gentle 2D sway/bob animation. This is not a lip-synced character.
+- No Lightning service is deployed. No paid compute was started. Faithful Office layout conversions and validated PDF/A remain pending, as documented in FEATURES.md.
+- V3 is a debug-signed preview, not a production release.
 # V2 validation
 
 - `assembleDebug assembleDebugAndroidTest lintDebug` passed for version 2.0.
